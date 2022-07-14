@@ -1,0 +1,722 @@
+-- Minified --
+
+
+local a= {RainbowColorValue = 0, HueSelectionPosition = 0}local b= game:GetService("UserInputService")local c= game:GetService("TweenService")local d= game:GetService("RunService")local e= game:GetService("Players").LocalPlayer;local e= e:GetMouse()local f= game:GetService("HttpService")local f= Enum.KeyCode.RightControl;coroutine.wrap(
+	function()
+		while wait() do
+			a.RainbowColorValue = a.RainbowColorValue + 1 / 255
+			a.HueSelectionPosition = a.HueSelectionPosition + 1
+
+			if a.RainbowColorValue >= 1 then
+				a.RainbowColorValue = 0
+			end
+
+			if a.HueSelectionPosition == 93 then
+				a.HueSelectionPosition = 0
+			end
+		end
+	end
+)()local a= {}function a:Window(g,h,i)local j= Instance.new("ScreenGui")local k= Instance.new("Frame")local l= Instance.new("Frame")local m= Instance.new("ImageLabel")local n= Instance.new("ImageLabel")local o= Instance.new("Frame")local p= Instance.new("TextButton")local q= Instance.new("ImageLabel")local r= Instance.new("Frame")local s= Instance.new("TextButton")local t= Instance.new("TextLabel")local u= Instance.new("ImageLabel")local v= Instance.new("Frame")local w= Instance.new("ImageLabel")local x= Instance.new("ImageLabel")local y= Instance.new("ImageLabel")local z= Instance.new("Frame")local A= Instance.new("ScrollingFrame")local B= Instance.new("UIListLayout")local C= Instance.new("UIPadding")local D= Instance.new("TextLabel")local E= Instance.new("TextButton")local F= Instance.new("Frame")local G= Instance.new("UICorner")local H= Instance.new("UICorner")local I= Instance.new("Frame")I.Name="LeftFrameLine"I.Parent=o;I.BackgroundColor3= Color3.fromRGB(31, 28, 54)I.BorderSizePixel=0;I.Position= UDim2.new(0.954999983, 0, 0, 0)I.Size= UDim2.new(0, 52, 0, 331)I.ZIndex=3;G.CornerRadius= UDim.new(0, 3)G.Name="MainFrameCorner"G.Parent=k;H.CornerRadius= UDim.new(0, 3)H.Name="LeftFrameCorner"H.Parent=o;f=i or Enum.KeyCode.RightControl;local i=false;local G=false;b.InputBegan:Connect(
+		function(a, b)
+			if a.KeyCode == f then
+				if G == false then
+					c:Create(
+						k,
+						TweenInfo.new(.35, Enum.EasingStyle.Quart, Enum.EasingDirection.Out),
+						{Size = UDim2.new(0, 0, 0, 0)}
+					):Play()
+					c:Create(
+						l,
+						TweenInfo.new(.32, Enum.EasingStyle.Quart, Enum.EasingDirection.Out),
+						{Size = UDim2.new(0, 0, 0, 0)}
+					):Play()
+					c:Create(
+						m,
+						TweenInfo.new(.35, Enum.EasingStyle.Quart, Enum.EasingDirection.Out),
+						{ImageTransparency = 1}
+					):Play()
+					c:Create(
+						n,
+						TweenInfo.new(.35, Enum.EasingStyle.Quart, Enum.EasingDirection.Out),
+						{ImageTransparency = 1}
+					):Play()
+					wait(.35)
+					E.Visible = false
+					G = true
+				else
+					if o.Size == UDim2.new(0, 144,0, 331) then
+						c:Create(
+							o,
+							TweenInfo.new(.0, Enum.EasingStyle.Quart, Enum.EasingDirection.Out),
+							{Size = UDim2.new(0, 41,0, 331)}
+						):Play()
+						c:Create(
+							q,
+							TweenInfo.new(.0, Enum.EasingStyle.Quart, Enum.EasingDirection.Out),
+							{Rotation = 270}
+						):Play()
+						c:Create(
+							z,
+							TweenInfo.new(.0, Enum.EasingStyle.Quart, Enum.EasingDirection.Out),
+							{Size = UDim2.new(0, 144,0, 0)}
+						):Play()
+						c:Create(
+							u,
+							TweenInfo.new(.0, Enum.EasingStyle.Quart, Enum.EasingDirection.Out),
+							{Rotation = 270}
+						):Play()
+					end
+					c:Create(
+						k,
+						TweenInfo.new(.35, Enum.EasingStyle.Quart, Enum.EasingDirection.Out),
+						{Size = UDim2.new(0, 448, 0, 331)}
+					):Play()
+					c:Create(
+						l,
+						TweenInfo.new(.35, Enum.EasingStyle.Quart, Enum.EasingDirection.Out),
+						{Size = UDim2.new(0, 448, 0, 331)}
+					):Play()
+					c:Create(
+						m,
+						TweenInfo.new(.35, Enum.EasingStyle.Quart, Enum.EasingDirection.Out),
+						{ImageTransparency = 0}
+					):Play()
+					c:Create(
+						n,
+						TweenInfo.new(.35, Enum.EasingStyle.Quart, Enum.EasingDirection.Out),
+						{ImageTransparency = 0}
+					):Play()
+					l.Visible = true
+					G = false
+				end
+			end
+		end)j.Name="Library"j.Parent= game.CoreGui;j.ZIndexBehavior= Enum.ZIndexBehavior.Sibling;j.ResetOnSpawn=false;j.IgnoreGuiInset=false;k.Name="MainFrame"k.Parent=l;k.AnchorPoint= Vector2.new(0.5, 0.5)k.BackgroundColor3= Color3.fromRGB(21, 18, 45)k.BorderSizePixel=0;k.Position= UDim2.new(0.5, 0,0.5, 0)k.Size= UDim2.new(0, 0, 0, 0)k.ClipsDescendants=true;k.BackgroundTransparency=0;l.Name="MainFrameGlow"l.Parent=j;l.AnchorPoint= Vector2.new(0.5, 0.5)l.BackgroundColor3= Color3.fromRGB(21, 18, 45)l.BackgroundTransparency=1.000;l.BorderSizePixel=0;l.Position= UDim2.new(0.5, 0, 0.5, 0)l.Size= UDim2.new(0, 0, 0, 0)m.Name="MainFrameGlow1"m.Parent=l;m.BackgroundColor3= Color3.fromRGB(0, 0, 0)m.BackgroundTransparency=1.000;m.Position= UDim2.new(0, -15, 0, -15)m.Size= UDim2.new(1, 30, 1, 30)m.ZIndex=0;m.Image="rbxassetid://5028857084"m.ImageColor3= Color3.fromRGB(21, 20, 45)m.ScaleType= Enum.ScaleType.Slice;m.SliceCenter= Rect.new(24, 24, 276, 276)m.ImageTransparency=1;n.Name="MainFrameGlow2"n.Parent=l;n.BackgroundColor3= Color3.fromRGB(0, 0, 0)n.BackgroundTransparency=1.000;n.Position= UDim2.new(0, -15, 0, -15)n.Size= UDim2.new(1, 30, 1, 30)n.ZIndex=0;n.Image="rbxassetid://5028857084"n.ImageColor3= Color3.fromRGB(21, 20, 45)n.ScaleType= Enum.ScaleType.Slice;n.SliceCenter= Rect.new(24, 24, 276, 276)n.ImageTransparency=1;c:Create(
+		k,
+		TweenInfo.new(.35, Enum.EasingStyle.Quart, Enum.EasingDirection.Out),
+		{Size = UDim2.new(0, 448, 0, 331)}
+	):Play()c:Create(
+		l,
+		TweenInfo.new(.35, Enum.EasingStyle.Quart, Enum.EasingDirection.Out),
+		{Size = UDim2.new(0, 448, 0, 331)}
+	):Play()c:Create(
+		m,
+		TweenInfo.new(.35, Enum.EasingStyle.Quart, Enum.EasingDirection.Out),
+		{ImageTransparency = 0}
+	):Play()c:Create(
+		n,
+		TweenInfo.new(.35, Enum.EasingStyle.Quart, Enum.EasingDirection.Out),
+		{ImageTransparency = 0}
+	):Play()local b= Instance.new("Folder")b.Name="pagesFolder"b.Parent=F;o.Name="LeftFrame"o.Parent=k;o.BackgroundColor3= Color3.fromRGB(31, 28, 54)o.BorderSizePixel=0;o.ClipsDescendants=true;o.Size= UDim2.new(0, 41, 0, 331)o.ZIndex=3;o.Visible=true;p.Name="LeftFrameBtn"p.Parent=o;p.BackgroundColor3= Color3.fromRGB(56, 56, 56)p.BackgroundTransparency=1.000;p.BorderSizePixel=0;p.Position= UDim2.new(0, 0, 0.00999999978, 0)p.Size= UDim2.new(0, 41, 0, 41)p.ZIndex=3;p.AutoButtonColor=false;p.Font= Enum.Font.SourceSans;p.Text=""p.TextColor3= Color3.fromRGB(0, 0, 0)p.TextSize=14.000;q.Name="LeftFrameBtnIcon"q.Parent=p;q.BackgroundColor3= Color3.fromRGB(255, 255, 255)q.BackgroundTransparency=1.000;q.Position= UDim2.new(0.14204666, 0, 0.145281106, 0)q.Rotation=270.000;q.Selectable=true;q.Size= UDim2.new(0, 27, 0, 27)q.ZIndex=3;q.Image="rbxassetid://5844057859"r.Name="MainTabs"r.Parent=o;r.BackgroundColor3= Color3.fromRGB(0, 0, 0)r.BackgroundTransparency=1.000;r.BorderSizePixel=0;r.Position= UDim2.new(0, 0, 0.136999995, 0)r.Size= UDim2.new(0, 41, 0, 41)r.ZIndex=3;r.Visible=true;s.Name="MainTabsBtn"s.Parent=r;s.BackgroundColor3= Color3.fromRGB(67, 67, 67)s.BackgroundTransparency=1.000;s.Position= UDim2.new(1.04878044, 0, 0.126829565, 0)s.Size= UDim2.new(0, 101, 0, 29)s.ZIndex=3;s.AutoButtonColor=false;s.Font= Enum.Font.Gotham;s.Text=""s.TextColor3= Color3.fromRGB(255, 255, 255)s.TextSize=14.000;s.TextXAlignment= Enum.TextXAlignment.Left;t.Name="MainTabsBtnTitle"t.Parent=s;t.BackgroundColor3= Color3.fromRGB(255, 255, 255)t.BackgroundTransparency=1.000;t.Position= UDim2.new({0, 0},0, 0)t.Size= UDim2.new(0.744, 0,1, 0)t.ZIndex=3;t.Font= Enum.Font.Gotham;t.Text=h;t.TextColor3= Color3.fromRGB(255, 255, 255)t.TextSize=13.000;t.TextWrapped=true;t.TextXAlignment= Enum.TextXAlignment.Left;u.Name="MainTabsBtnIcon"u.Parent=s;u.BackgroundColor3= Color3.fromRGB(255, 255, 255)u.BackgroundTransparency=1.000;u.Position= UDim2.new(0.744000018, 0, 0.128000006, 0)u.Rotation=270.000;u.Selectable=true;u.Size= UDim2.new(0, 21, 0, 21)u.ZIndex=3;u.Image="rbxassetid://5844057859"v.Name="Shapes"v.Parent=r;v.BackgroundColor3= Color3.fromRGB(90, 90, 90)v.BackgroundTransparency=1.000;v.BorderSizePixel=0;v.Selectable=true;v.Size= UDim2.new(0, 41, 0, 41)v.ZIndex=3;w.Name="Triangle"w.Parent=v;w.BackgroundColor3= Color3.fromRGB(255, 255, 255)w.BackgroundTransparency=1.000;w.BorderColor3= Color3.fromRGB(27, 42, 53)w.Position= UDim2.new(0.423999995, 0, 0.270999998, 0)w.Size= UDim2.new(0, 8, 0, 8)w.ZIndex=3;w.Image="http://www.roblox.com/asset/?id=2288924051"x.Name="Square"x.Parent=v;x.BackgroundColor3= Color3.fromRGB(255, 255, 255)x.BackgroundTransparency=1.000;x.BorderColor3= Color3.fromRGB(27, 42, 53)x.Position= UDim2.new(0.285780489, 0, 0.49642849, 0)x.Size= UDim2.new(0, 8, 0, 8)x.ZIndex=3;x.Image="http://www.roblox.com/asset/?id=5118326498"y.Name="Circle"y.Parent=v;y.BackgroundColor3= Color3.fromRGB(255, 255, 255)y.BackgroundTransparency=1.000;y.BorderColor3= Color3.fromRGB(27, 42, 53)y.Position= UDim2.new(0.515999973, 0, 0.495999992, 0)y.Size= UDim2.new(0, 8, 0, 8)y.ZIndex=3;y.Image="http://www.roblox.com/asset/?id=6631155345"z.Name="SecondaryTabs"z.Parent=r;z.BackgroundColor3= Color3.fromRGB(255, 255, 255)z.BackgroundTransparency=1.000;z.ClipsDescendants=true;z.Position= UDim2.new(0, 0,0.976, 0)z.Size= UDim2.new(0, 144, 0, 0)z.ZIndex=3;A.Name="AllTabs"A.Parent=z;A.Active=true;A.BackgroundColor3= Color3.fromRGB(255, 255, 255)A.BackgroundTransparency=1.000;A.BorderSizePixel=0;A.Size= UDim2.new(1.13194442, 0, 1, 0)A.AutomaticCanvasSize= Enum.AutomaticSize.Y;A.CanvasSize= UDim2.new(0, 0, 0, 0)A.ScrollBarImageColor3= Color3.fromRGB(255, 255, 255)A.ScrollBarImageTransparency=0;A.ScrollBarThickness=2;A.VerticalScrollBarPosition= Enum.VerticalScrollBarPosition.Left;B.Name="TabsListing"B.Parent=A;B.HorizontalAlignment= Enum.HorizontalAlignment.Center;B.SortOrder= Enum.SortOrder.LayoutOrder;B.Padding= UDim.new(0, 1)C.Name="TabsPadding"C.Parent=A;C.PaddingRight= UDim.new(0, 19)D.Name="Title"D.Parent=k;D.BackgroundColor3= Color3.fromRGB(255, 255, 255)D.BackgroundTransparency=1.000;D.Position= UDim2.new(0.13, 0,0.009, 0)D.Size= UDim2.new(0, 210, 0, 43)D.Font= Enum.Font.Gotham;D.Text="| "..g.." |"D.TextColor3= Color3.fromRGB(255, 255, 255)D.TextSize=19.000;D.TextXAlignment= Enum.TextXAlignment.Left;D.TextTransparency=0;E.Name="ShadowFrame"E.Parent=k;E.BackgroundColor3= Color3.fromRGB(0, 0, 0)E.BackgroundTransparency=1.000;E.BorderSizePixel=0;E.Size= UDim2.new(0, 448, 0, 331)E.Position= UDim2.new(0, 0, 0, 0)E.Visible=false;E.ZIndex=2;E.AutoButtonColor=false;E.Font= Enum.Font.SourceSans;E.Text=""E.TextColor3= Color3.fromRGB(0, 0, 0)E.TextSize=14.000;F.Name="AllPages"F.Parent=k;F.BackgroundColor3= Color3.fromRGB(24, 21, 48)F.BorderSizePixel=0;F.Position= UDim2.new(0.123, 0,0.139, 0)F.Size= UDim2.new(0, 381, 0, 271)F.BackgroundTransparency=0;F.Visible=true;local f=false;p.MouseButton1Click:Connect(function()
+		f = not f
+		if o.Size == UDim2.new(0, 41,0, 331) then
+			f = true
+		end
+		if f then
+			E.Visible = true
+			c:Create(
+				o,
+				TweenInfo.new(.35, Enum.EasingStyle.Quart, Enum.EasingDirection.Out),
+				{Size = UDim2.new(0, 144,0, 331)}
+			):Play()
+			c:Create(
+				E,
+				TweenInfo.new(.35, Enum.EasingStyle.Quart, Enum.EasingDirection.Out),
+				{BackgroundTransparency = 0.68}
+			):Play()
+			c:Create(
+				q,
+				TweenInfo.new(.35, Enum.EasingStyle.Quart, Enum.EasingDirection.Out),
+				{Rotation = 90}
+			):Play()
+			wait(.16)
+			c:Create(
+				z,
+				TweenInfo.new(.35, Enum.EasingStyle.Quart, Enum.EasingDirection.Out),
+				{Size = UDim2.new(0, 144,0, 172)}
+			):Play()
+			c:Create(
+				u,
+				TweenInfo.new(.35, Enum.EasingStyle.Quart, Enum.EasingDirection.Out),
+				{Rotation = 360}
+			):Play()
+		else
+			c:Create(
+				o,
+				TweenInfo.new(.35, Enum.EasingStyle.Quart, Enum.EasingDirection.Out),
+				{Size = UDim2.new(0, 41,0, 331)}
+			):Play()
+			c:Create(
+				E,
+				TweenInfo.new(.35, Enum.EasingStyle.Quart, Enum.EasingDirection.Out),
+				{BackgroundTransparency = 1}
+			):Play()
+			c:Create(
+				q,
+				TweenInfo.new(.35, Enum.EasingStyle.Quart, Enum.EasingDirection.Out),
+				{Rotation = 270}
+			):Play()
+			c:Create(
+				z,
+				TweenInfo.new(.35, Enum.EasingStyle.Quart, Enum.EasingDirection.Out),
+				{Size = UDim2.new(0, 144,0, 0)}
+			):Play()
+			c:Create(
+				u,
+				TweenInfo.new(.35, Enum.EasingStyle.Quart, Enum.EasingDirection.Out),
+				{Rotation = 270}
+			):Play()
+			wait(.35)
+			E.Visible = false
+		end
+	end)local function g()local a= Instance.new('LocalScript', s)local b= game:GetService("TweenService")local c= a.Parent.Parent.MainTabsBtn.Parent.Parent.MainTabs;local c=true;a.Parent.MouseButton1Click:Connect(function()
+			if o.Size == UDim2.new(0, 41,0, 331) then
+				f = false
+			end
+			c = not c
+			if c then
+				b:Create(
+					u,
+					TweenInfo.new(.35, Enum.EasingStyle.Quart, Enum.EasingDirection.Out),
+					{Rotation = 360}
+				):Play()
+				b:Create(
+					z,
+					TweenInfo.new(.35, Enum.EasingStyle.Quart, Enum.EasingDirection.Out),
+					{Size = UDim2.new(0, 144,0, 172)}
+				):Play()
+			else
+				b:Create(
+					u,
+					TweenInfo.new(.35, Enum.EasingStyle.Quart, Enum.EasingDirection.Out),
+					{Rotation = 270}
+				):Play()
+				b:Create(
+					z,
+					TweenInfo.new(.35, Enum.EasingStyle.Quart, Enum.EasingDirection.Out),
+					{Size = UDim2.new(0, 144,0, 0)}
+				):Play()
+			end
+		end)end;coroutine.wrap(g)()local function f()local a= Instance.new('LocalScript', l)local b= game:GetService("UserInputService")function dragify(a)dragToggle=nil;local c=0;dragInput=nil;dragStart=nil;local c=nil;function updateInput(b)local b= b.Position-dragStart;local b= UDim2.new(startPos.X.Scale, startPos.X.Offset + b.X, startPos.Y.Scale, startPos.Y.Offset + b.Y)game:GetService("TweenService"):Create(a, TweenInfo.new(0.25), {Position = b}):Play()end;a.InputBegan:Connect(function(c)
+				if (c.UserInputType == Enum.UserInputType.MouseButton1 or c.UserInputType == Enum.UserInputType.Touch) and b:GetFocusedTextBox() == nil then
+					dragToggle = true
+					dragStart = c.Position
+					startPos = a.Position
+					c.Changed:Connect(function()
+						if c.UserInputState == Enum.UserInputState.End then
+							dragToggle = false
+						end
+					end)
+				end
+			end)a.InputChanged:Connect(function(a)
+				if a.UserInputType == Enum.UserInputType.MouseMovement or a.UserInputType == Enum.UserInputType.Touch then
+					dragInput = a
+				end
+			end)game:GetService("UserInputService").InputChanged:Connect(function(a)
+				if a == dragInput and dragToggle then
+					updateInput(a)
+				end
+			end)end;dragify(a.Parent)end;coroutine.wrap(f)()local f= {}function f:Tab(f)local f=f or"New Tab"local g= Instance.new("TextButton")local h= Instance.new("UIGradient")local j= Instance.new("UICorner")local k= Instance.new("TextLabel")local l= Instance.new("ImageLabel")local m= Instance.new("ScrollingFrame")local n= Instance.new("UIListLayout")local o= Instance.new("UIPadding")if i==false then i=true;g.BackgroundTransparency=0;m.Visible=true end;g.Name="TabBtn"g.Parent=A;g.BackgroundColor3= Color3.fromRGB(255, 255, 255)g.BackgroundTransparency=1.000;g.Position= UDim2.new(0, 0, 0.348017633, 0)g.Size= UDim2.new(0, 138, 0, 28)g.ZIndex=3;g.AutoButtonColor=false;g.Font= Enum.Font.SourceSans;g.Text=""g.TextColor3= Color3.fromRGB(0, 0, 0)g.TextSize=14.000;g.MouseButton1Click:Connect(function()
+			for a, a in next, b:GetChildren() do
+				if a.Name == "NewPages" then
+					c:Create(
+						a,
+						TweenInfo.new(.35, Enum.EasingStyle.Quart, Enum.EasingDirection.Out),
+						{Size = UDim2.new(0, 393,0, 0)}
+					):Play()
+					a.ScrollBarThickness = 0
+				end 
+			end
+			for a, a in next, A:GetChildren() do
+				if a.Name == "TabBtn" then
+					c:Create(
+						a,
+						TweenInfo.new(.35, Enum.EasingStyle.Quart, Enum.EasingDirection.Out),
+						{BackgroundTransparency = 1}
+					):Play()
+					c:Create(
+						g,
+						TweenInfo.new(.35, Enum.EasingStyle.Quart, Enum.EasingDirection.Out),
+						{BackgroundTransparency = 0}
+					):Play()
+				end
+			end
+			c:Create(
+				m,
+				TweenInfo.new(.35, Enum.EasingStyle.Quart, Enum.EasingDirection.Out),
+				{Size = UDim2.new(0, 393,0, 263)}
+			):Play()
+			m.Visible = true
+			wait(.35)
+			m.ScrollBarThickness = 2
+		end)h.Color= ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(27, 96, 186)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(19, 101, 190))}h.Name="TabBtnGradient"h.Parent=g;j.CornerRadius= UDim.new(0, 2)j.Name="TabBtnCorner"j.Parent=g;k.Name="TabBtnTitle"k.Parent=g;k.BackgroundColor3= Color3.fromRGB(255, 255, 255)k.BackgroundTransparency=1.000;k.Position= UDim2.new(0.280303031, 0, 0, 0)k.Size= UDim2.new(0.719696999, 0, 1, 0)k.ZIndex=3;k.Font= Enum.Font.Gotham;k.Text=f;k.TextColor3= Color3.fromRGB(255, 255, 255)k.TextSize=13.000;k.TextWrapped=true;k.TextXAlignment= Enum.TextXAlignment.Left;l.Name="TabBtnCircle"l.Parent=g;l.BackgroundColor3= Color3.fromRGB(255, 255, 255)l.BackgroundTransparency=1.000;l.BorderColor3= Color3.fromRGB(27, 42, 53)l.Position= UDim2.new(0.099, 0,0.427, 0)l.Size= UDim2.new(0, 4, 0, 4)l.ZIndex=3;l.Image="http://www.roblox.com/asset/?id=6631155345"m.Name="NewPages"m.Parent=b;m.ClipsDescendants=true;m.Active=true;m.BackgroundColor3= Color3.fromRGB(255, 255, 255)m.BackgroundTransparency=1.000;m.BorderSizePixel=0;m.Size= UDim2.new(0, 393,0, 0)m.Position= UDim2.new(-0.004, 0,0.01, 0)m.ScrollBarThickness=0;m.ScrollBarImageTransparency=0;m.AutomaticCanvasSize= Enum.AutomaticSize.Y;m.CanvasSize= UDim2.new(0, 0, 1, 0)m.Visible=false;n.Name="ElementListing"n.Parent=m;n.HorizontalAlignment= Enum.HorizontalAlignment.Center;n.SortOrder= Enum.SortOrder.LayoutOrder;n.Padding= UDim.new(0, 2)o.Name="ElementPadding"o.Parent=m;o.PaddingRight= UDim.new(0, 10)local b= {}function b:Button(a,b)a=a or"Text Button"b=b or function() end;local d= Instance.new("TextButton")local e= Instance.new("TextLabel")d.Name="Button"d.Parent=m;d.BackgroundColor3= Color3.fromRGB(29, 26, 53)d.BorderSizePixel=0;d.Size= UDim2.new(0, 375, 0, 32)d.AutoButtonColor=false;d.Font= Enum.Font.SourceSans;d.Text=""d.TextColor3= Color3.fromRGB(0, 0, 0)d.TextSize=14.000;d.MouseButton1Click:Connect(function()
+				b()
+				c:Create(
+					e,
+					TweenInfo.new(.2, Enum.EasingStyle.Quart, Enum.EasingDirection.Out),
+					{TextSize = 12}
+				):Play()
+				c:Create(
+					d,
+					TweenInfo.new(.2, Enum.EasingStyle.Quart, Enum.EasingDirection.Out),
+					{Size = UDim2.new(0, 353, 0, 28)}
+				):Play()
+				c:Create(
+					d,
+					TweenInfo.new(.2, Enum.EasingStyle.Quart, Enum.EasingDirection.Out),
+					{BackgroundColor3 = Color3.fromRGB(27, 96, 186)}
+				):Play()
+				wait(.2)
+				c:Create(
+					e,
+					TweenInfo.new(.2, Enum.EasingStyle.Quart, Enum.EasingDirection.Out),
+					{TextSize = 14}
+				):Play()
+				c:Create(
+					d,
+					TweenInfo.new(.2, Enum.EasingStyle.Quart, Enum.EasingDirection.Out),
+					{BackgroundColor3 = Color3.fromRGB(29, 26, 53)}
+				):Play()
+				c:Create(
+					d,
+					TweenInfo.new(.2, Enum.EasingStyle.Quart, Enum.EasingDirection.Out),
+					{Size = UDim2.new(0, 375, 0, 32)}
+				):Play()
+			end)d.MouseEnter:Connect(
+				function(a)
+					c:Create(
+						d,
+						TweenInfo.new(.3, Enum.EasingStyle.Quart, Enum.EasingDirection.Out),
+						{BackgroundColor3 = Color3.fromRGB(33, 31, 56)}
+					):Play()
+				end
+			)d.MouseLeave:Connect(
+				function(a)
+					c:Create(
+						d,
+						TweenInfo.new(.3, Enum.EasingStyle.Quart, Enum.EasingDirection.Out),
+						{BackgroundColor3 = Color3.fromRGB(29, 26, 53)}
+					):Play()
+				end
+			)e.Name="ButtonTitle"e.Parent=d;e.BackgroundColor3= Color3.fromRGB(255, 255, 255)e.BackgroundTransparency=1.000;e.Size= UDim2.new(1, 0, 1, 0)e.Font= Enum.Font.Gotham;e.Text=a;e.TextColor3= Color3.fromRGB(255, 255, 255)e.TextSize=14.000;m.CanvasSize= UDim2.new(0, 0, 0, n.AbsoluteContentSize.Y)end;function b:Toggle(a,b)a=a or"Toggle"b=b or function() end;local d=false;local e= Instance.new("TextButton")local f= Instance.new("TextLabel")local g= Instance.new("Frame")local h= Instance.new("UICorner")e.Name="ToggleBtn"e.Parent=m;e.BackgroundColor3= Color3.fromRGB(29, 26, 53)e.BorderSizePixel=0;e.Size= UDim2.new(0, 375, 0, 32)e.AutoButtonColor=false;e.Font= Enum.Font.SourceSans;e.Text=""e.TextColor3= Color3.fromRGB(0, 0, 0)e.TextSize=14.000;e.MouseButton1Click:Connect(function()
+				d = not d
+				b(d)
+				if d then
+					c:Create(
+						g,
+						TweenInfo.new(.35, Enum.EasingStyle.Quart, Enum.EasingDirection.Out),
+						{BackgroundColor3 = Color3.fromRGB(135, 128, 176)}
+					):Play()
+				else
+					c:Create(
+						g,
+						TweenInfo.new(.35, Enum.EasingStyle.Quart, Enum.EasingDirection.Out),
+						{BackgroundColor3 = Color3.fromRGB(74, 68, 94)}
+					):Play()
+				end
+			end)e.MouseEnter:Connect(
+				function(a)
+					c:Create(
+						e,
+						TweenInfo.new(.3, Enum.EasingStyle.Quart, Enum.EasingDirection.Out),
+						{BackgroundColor3 = Color3.fromRGB(33, 31, 56)}
+					):Play()
+				end
+			)e.MouseLeave:Connect(
+				function(a)
+					c:Create(
+						e,
+						TweenInfo.new(.3, Enum.EasingStyle.Quart, Enum.EasingDirection.Out),
+						{BackgroundColor3 = Color3.fromRGB(29, 26, 53)}
+					):Play()
+				end
+			)f.Name="ToggleTitle"f.Parent=e;f.BackgroundColor3= Color3.fromRGB(255, 255, 255)f.BackgroundTransparency=1.000;f.Position= UDim2.new(0.03763441, 0, 0, 0)f.Size= UDim2.new(0.962365568, 0, 1, 0)f.Font= Enum.Font.Gotham;f.Text=a;f.TextColor3= Color3.fromRGB(255, 255, 255)f.TextSize=14.000;f.TextXAlignment= Enum.TextXAlignment.Left;g.Name="ToggleBox"g.Parent=e;g.BackgroundColor3= Color3.fromRGB(74, 68, 94)g.Position= UDim2.new(0.927419364, 0, 0.15625, 0)g.Size= UDim2.new(0, 21, 0, 21)h.CornerRadius= UDim.new(0, 6)h.Name="ToggleBoxCorner"h.Parent=g;m.CanvasSize= UDim2.new(0, 0, 0, n.AbsoluteContentSize.Y)end;function b:Slider(a,b,d,e,f)local g= {}local h=false;local i= Instance.new("TextButton")local j= Instance.new("TextLabel")local k= Instance.new("Frame")local l= Instance.new("Frame")local o= Instance.new("ImageButton")local p= Instance.new("ImageButton")local q= Instance.new("ImageLabel")local q= Instance.new("TextLabel")local r= Instance.new("UICorner")local s= Instance.new("UICorner")i.Name="Slider"i.Parent=m;i.BackgroundColor3= Color3.fromRGB(29, 26, 53)i.ClipsDescendants=false;i.Position= UDim2.new(0, 372, 0, 51)i.Size= UDim2.new(0, 375, 0, 51)i.AutoButtonColor=false;i.Font= Enum.Font.SourceSans;i.Text=""i.TextColor3= Color3.fromRGB(0, 0, 0)i.TextSize=14.000;i.BorderSizePixel=0;i.MouseEnter:Connect(
+				function(a)
+					c:Create(
+						i,
+						TweenInfo.new(.3, Enum.EasingStyle.Quart, Enum.EasingDirection.Out),
+						{BackgroundColor3 = Color3.fromRGB(33, 31, 56)}
+					):Play()
+				end
+			)i.MouseLeave:Connect(
+				function(a)
+					c:Create(
+						i,
+						TweenInfo.new(.3, Enum.EasingStyle.Quart, Enum.EasingDirection.Out),
+						{BackgroundColor3 = Color3.fromRGB(29, 26, 53)}
+					):Play()
+				end
+			)j.Name="SliderTitle"j.Parent=i;j.BackgroundColor3= Color3.fromRGB(66, 66, 66)j.BackgroundTransparency=1.000;j.Position= UDim2.new(0.038, 0,-0.181, 0)j.Size= UDim2.new(0.962, 0,1, 0)j.Font= Enum.Font.Gotham;j.Text=a;j.TextColor3= Color3.fromRGB(255, 255, 255)j.TextSize=14.000;j.TextTransparency=0;j.TextXAlignment= Enum.TextXAlignment.Left;k.Name="SlideFrame"k.Parent=j;k.BackgroundColor3= Color3.fromRGB(74, 68, 94)k.BorderSizePixel=0;k.Position= UDim2.new(0.003, 0,0.945, 0)k.Size= UDim2.new(0, 340,0, 3)k.BackgroundTransparency=0;s.Name="SlideFrameCorner"s.Parent=k;l.Name="CurrentValueFrame"l.Parent=k;l.BackgroundColor3= Color3.fromRGB(255, 255, 255)l.BorderSizePixel=0;l.Size= UDim2.new((e or 0) / d, 0, 0, 3)o.Name="SlideCircle"o.Parent=k;o.BackgroundColor3= Color3.fromRGB(124, 37, 255)o.BackgroundTransparency=1.000;o.Position= UDim2.new((e or 0)/d, -6,-0.93499995, 0)o.Size= UDim2.new(0, 8, 0, 8)o.Image="rbxassetid://3570695787"o.ImageColor3= Color3.fromRGB(255, 255, 255)q.Name="Value"q.Parent=j;q.AnchorPoint= Vector2.new(1, 0.5)q.BackgroundColor3= Color3.fromRGB(74, 68, 94)q.BackgroundTransparency=0;q.Position= UDim2.new(0.983, 0,0.484, 0)q.Size= UDim2.new(0, 38, 0, 21)q.Font= Enum.Font.Gotham;q.Text= tostring(e and math.floor((e / d) * (d - b) + b) or 0)q.TextColor3= Color3.fromRGB(255, 255, 255)q.TextSize=14.000;q.TextTransparency=0;q.TextXAlignment= Enum.TextXAlignment.Center;q.Changed:Connect(function(a)
+				if a then
+					q:TweenSize(UDim2.new(0, q.TextBounds.X + 18, 0, 21), Enum.EasingDirection.Out, Enum.EasingStyle.Quart, .4, true)
+				end
+			end)if q.Size==UDim2.new(0, 38, 0, 24)then q.Size= UDim2.new(0, 38, 0, 21)end;r.CornerRadius= UDim.new(0, 4)r.Name="ValueCorner"r.Parent=q;p.MouseButton1Click:Connect(function()
+				print("")
+			end)local function a(a)local c=
+					UDim2.new(
+						math.clamp((a.Position.X - k.AbsolutePosition.X) / k.AbsoluteSize.X, 0, 1),
+						-6,
+						-0.93499995,
+						0
+					)local a=
+					UDim2.new(
+						math.clamp((a.Position.X - k.AbsolutePosition.X) / k.AbsoluteSize.X, 0, 1),
+						0,
+						0,
+						3
+					)l:TweenSize(a, "Out", "Quart", .4, true)o:TweenPosition(c, "Out", "Quart", .4, true)local a= math.floor(((c.X.Scale * d) / d) * (d - b) + b)q.Text= tostring(a)pcall(f, a)end;o.InputBegan:Connect(
+				function(a)
+					if a.UserInputType == Enum.UserInputType.MouseButton1 then
+						h = true
+					end
+				end
+			)o.InputEnded:Connect(
+				function(a)
+					if a.UserInputType == Enum.UserInputType.MouseButton1 then
+						h = false
+					end
+				end
+			)game:GetService("UserInputService").InputChanged:Connect(
+			function(b)
+				if h and b.UserInputType == Enum.UserInputType.MouseMovement then
+					a(b)
+				end
+			end
+			)function g:Change(a)l.Size= UDim2.new((a or 0) / d, 0, 0, 3)o.Position= UDim2.new((a or 0)/d, -6,-0.93499995, 0)q.Text= tostring(a and math.floor((a / d) * (d - b) + b) or 0)pcall(f,a)end;m.CanvasSize= UDim2.new(0, 0, 0, n.AbsoluteContentSize.Y)return g end;function b:Line()local a= Instance.new("Frame")local b= Instance.new("Frame")local c= Instance.new("UIListLayout")a.Name="LineFrame"a.Parent=m;a.BackgroundColor3= Color3.fromRGB(0, 0, 0)a.BackgroundTransparency=1.000;a.BorderSizePixel=0;a.Position= UDim2.new(0.0118110236, 0, 0.129277572, 0)a.Size= UDim2.new(0, 372, 0, 12)b.Name="Line"b.Parent=a;b.BackgroundColor3= Color3.fromRGB(255, 255, 255)b.BorderSizePixel=0;b.Position= UDim2.new(0.0241935477, 0, 0.4375, 0)b.Size= UDim2.new(0, 365, 0, 1)b.BackgroundTransparency=0.1;c.Name="LineList"c.Parent=a;c.HorizontalAlignment= Enum.HorizontalAlignment.Center;c.SortOrder= Enum.SortOrder.LayoutOrder;c.VerticalAlignment= Enum.VerticalAlignment.Center;m.CanvasSize= UDim2.new(0, 0, 0, n.AbsoluteContentSize.Y)end;function b:Label(a)local b= Instance.new("Frame")local c= Instance.new("TextLabel")b.Name="Label"b.Parent=m;b.BackgroundColor3= Color3.fromRGB(255, 255, 255)b.BorderSizePixel=0;b.Size= UDim2.new(0, 375, 0, 32)c.Name="LabelText"c.Parent=b;c.BackgroundColor3= Color3.fromRGB(29, 26, 53)c.BorderSizePixel=0;c.Size= UDim2.new(1, 0, 1, 0)c.Font= Enum.Font.Gotham;c.Text=a;c.TextColor3= Color3.fromRGB(255, 255, 255)c.TextSize=14.000;m.CanvasSize= UDim2.new(0, 0, 0, n.AbsoluteContentSize.Y)end;function b:Dropdown(a,b,d)local e=false;local f=0;local g=0;local h=0;local i=a;local j= Instance.new("TextButton")local k= Instance.new("TextLabel")local l= Instance.new("ImageButton")j.Name="Dropdown"j.Parent=m;j.AnchorPoint= Vector2.new(0.5, 0.5)j.BackgroundColor3= Color3.fromRGB(29, 26, 53)j.BorderSizePixel=0;j.Position= UDim2.new(-0.436928689, 0, 0.696994126, 0)j.Size= UDim2.new(0, 375, 0, 32)j.AutoButtonColor=false;j.Font= Enum.Font.Gotham;j.Text=""j.TextColor3= Color3.fromRGB(195, 195, 195)j.TextSize=14.000;j.MouseEnter:Connect(
+				function(a)
+					c:Create(
+						j,
+						TweenInfo.new(.3, Enum.EasingStyle.Quart, Enum.EasingDirection.Out),
+						{BackgroundColor3 = Color3.fromRGB(33, 31, 56)}
+					):Play()
+				end
+			)j.MouseLeave:Connect(
+				function(a)
+					c:Create(
+						j,
+						TweenInfo.new(.3, Enum.EasingStyle.Quart, Enum.EasingDirection.Out),
+						{BackgroundColor3 = Color3.fromRGB(29, 26, 53)}
+					):Play()
+				end
+			)k.Name="DropdownTitle"k.Parent=j;k.BackgroundColor3= Color3.fromRGB(255, 255, 255)k.BackgroundTransparency=1.000;k.Position= UDim2.new(0.03763441, 0, 0, 0)k.Size= UDim2.new(0.962365568, 0, 1, 0)k.Font= Enum.Font.Gotham;k.TextColor3= Color3.fromRGB(255, 255, 255)k.TextSize=14.000;k.TextXAlignment= Enum.TextXAlignment.Left;k.TextTransparency=0;k.Text=a;l.Name="DropToggle"l.Parent=j;l.BackgroundTransparency=1.000;l.Position= UDim2.new(0.926, 0,0.135, 0)l.Size= UDim2.new(0, 23, 0, 23)l.ZIndex=2;l.Rotation=90;l.Image="rbxassetid://5844057859"l.ImageColor3= Color3.fromRGB(255, 255, 255)l.ImageRectOffset= Vector2.new(0, 0)l.ImageRectSize= Vector2.new(0, 0)local o= Instance.new("ScrollingFrame")local p= Instance.new("UIListLayout")o.Name="DropItemHolder"o.Parent=m;o.Active=true;o.BackgroundColor3= Color3.fromRGB(29, 26, 53)o.BackgroundTransparency=0;o.BorderSizePixel=0;o.Position= UDim2.new(0, 0, 0.202399909, 0)o.Size= UDim2.new(0, 375, 0, 0)o.BottomImage="rbxasset://textures/ui/Scroll/scroll-middle.png"o.CanvasSize= UDim2.new(0, 0, 0, 0)o.ScrollBarThickness=2;o.TopImage="rbxasset://textures/ui/Scroll/scroll-middle.png"o.AutomaticCanvasSize= Enum.AutomaticSize.Y;o.ClipsDescendants=true;o.Visible=false;p.Name="DropItemHolderUIList"p.Parent=o;p.SortOrder= Enum.SortOrder.LayoutOrder;p.Padding= UDim.new(0, 0)p.HorizontalAlignment= Enum.HorizontalAlignment.Center;j.MouseButton1Click:Connect(
+				function()
+					if e == false then
+						e = not e
+						c:Create(
+							l,
+							TweenInfo.new(.3, Enum.EasingStyle.Quart, Enum.EasingDirection.Out),
+							{Rotation = 0}
+						):Play()
+						k.Text = i
+						o.Visible = true
+						o:TweenSize(
+							UDim2.new(0, 375, 0, g),
+							Enum.EasingDirection.Out,
+							Enum.EasingStyle.Quart,
+							0.5,
+							true
+						)
+						repeat
+							wait()
+						until o.Size == UDim2.new(0, 375, 0, g)
+						m.CanvasSize = UDim2.new(0, 0, 0, n.AbsoluteContentSize.Y)
+					else
+						e = not e
+						c:Create(
+							l,
+							TweenInfo.new(.3, Enum.EasingStyle.Quart, Enum.EasingDirection.Out),
+							{Rotation = 90}
+						):Play()
+						k.Text = a
+						o:TweenSize(
+							UDim2.new(0, 375, 0, 0),
+							Enum.EasingDirection.Out,
+							Enum.EasingStyle.Quart,
+							0.5,
+							true
+						)
+						wait(.05)
+						o.Visible = false
+						repeat
+							wait()
+						until o.Size == UDim2.new(0, 375, 0, 0)
+						m.CanvasSize = UDim2.new(0, 0, 0, n.AbsoluteContentSize.Y)
+					end
+				end
+			)for b,b in next,b do f=f+1;local j= Instance.new("TextButton")j.Name="Option"j.Parent=o;j.AnchorPoint= Vector2.new(0.5, 0.5)j.BackgroundColor3= Color3.fromRGB(29, 26, 53)j.BorderSizePixel=0;j.BorderColor3= Color3.fromRGB(24, 21, 48)j.Position= UDim2.new(0.494680852, 0, 0.147959188, 0)j.Size= UDim2.new(0, 375, 0, 30)j.AutoButtonColor=false;j.Font= Enum.Font.Gotham;j.TextColor3= Color3.fromRGB(195, 195, 195)j.TextSize=14.000;j.Text=b;j.TextTransparency=0;if f<=3 then g=g+32;h=h+27 elseif f>=4 then o.CanvasSize= UDim2.new(0, 0, 0, p.AbsoluteContentSize.Y)end;j.MouseEnter:Connect(
+					function()
+						c:Create(
+							j,
+							TweenInfo.new(.3, Enum.EasingStyle.Quart, Enum.EasingDirection.Out),
+							{BackgroundColor3 = Color3.fromRGB(33, 31, 56)}
+						):Play()
+						c:Create(
+							j,
+							TweenInfo.new(.3, Enum.EasingStyle.Quart, Enum.EasingDirection.Out),
+							{TextColor3 = Color3.fromRGB(255, 255, 255)}
+						):Play()
+					end
+				)j.MouseLeave:Connect(
+					function()
+						c:Create(
+							j,
+							TweenInfo.new(.3, Enum.EasingStyle.Quart, Enum.EasingDirection.Out),
+							{BackgroundColor3 = Color3.fromRGB(29, 26, 53)}
+						):Play()
+						c:Create(
+							j,
+							TweenInfo.new(.3, Enum.EasingStyle.Quart, Enum.EasingDirection.Out),
+							{TextColor3 = Color3.fromRGB(195, 195, 195)}
+						):Play()
+					end
+				)j.MouseButton1Click:Connect(
+					function()
+						e = not e
+						c:Create(
+							l,
+							TweenInfo.new(.3, Enum.EasingStyle.Quart, Enum.EasingDirection.Out),
+							{Rotation = 90}
+						):Play()
+						k.Text = a
+						i = b
+						pcall(d, b)
+						o:TweenSize(
+							UDim2.new(0, 375, 0, 0),
+							Enum.EasingDirection.Out,
+							Enum.EasingStyle.Quart,
+							0.5,
+							true
+						)
+						wait(.05)
+						o.Visible = false
+						repeat
+							wait()
+						until o.Size == UDim2.new(0, 375, 0, 0)
+						m.CanvasSize = UDim2.new(0, 0, 0, n.AbsoluteContentSize.Y)
+					end
+				)end;m.CanvasSize= UDim2.new(0, 0, 0, n.AbsoluteContentSize.Y)end;function b:Colorpicker(b,f,g)local h=false;local i= Color3.fromRGB(0, 0, 0)local j= Color3.fromRGB(0, 0, 0)local k=nil;local l=nil;local o,p,q=1,1,1;local r=false;local s=nil;local s=nil;local t=nil;local u= Instance.new("TextButton")local v= Instance.new("TextLabel")local w= Instance.new("Frame")local x= Instance.new("UICorner")u.Name="Colorpicker"u.Parent=m;u.AnchorPoint= Vector2.new(0.5, 0.5)u.BackgroundColor3= Color3.fromRGB(29, 26, 53)u.Position= UDim2.new(-0.436928689, 0, 0.696994126, 0)u.Size= UDim2.new(0, 375, 0, 32)u.AutoButtonColor=false;u.Font= Enum.Font.Gotham;u.BorderSizePixel=0;u.Text=""u.TextColor3= Color3.fromRGB(195, 195, 195)u.TextSize=14.000;u.MouseEnter:Connect(
+				function(a)
+					c:Create(
+						u,
+						TweenInfo.new(.3, Enum.EasingStyle.Quart, Enum.EasingDirection.Out),
+						{BackgroundColor3 = Color3.fromRGB(33, 31, 56)}
+					):Play()
+				end
+			)u.MouseLeave:Connect(
+				function(a)
+					c:Create(
+						u,
+						TweenInfo.new(.3, Enum.EasingStyle.Quart, Enum.EasingDirection.Out),
+						{BackgroundColor3 = Color3.fromRGB(29, 26, 53)}
+					):Play()
+				end
+			)v.Name="ColorPickerTitle"v.Parent=u;v.BackgroundColor3= Color3.fromRGB(255, 255, 255)v.BackgroundTransparency=1.000;v.Position= UDim2.new(0.03763441, 0, 0, 0)v.Size= UDim2.new(0.962365568, 0, 1, 0)v.Font= Enum.Font.Gotham;v.TextColor3= Color3.fromRGB(255, 255, 255)v.TextSize=14.000;v.TextXAlignment= Enum.TextXAlignment.Left;v.Text=b;w.Name="CurrentColor"w.Parent=u;w.BackgroundColor3=f;w.Position= UDim2.new(0.927419364, 0, 0.15625, 0)w.Size= UDim2.new(0, 21, 0, 21)x.CornerRadius= UDim.new(0, 6)x.Name="ColorUICorner"x.Parent=w;local b= Instance.new("TextButton")local v= Instance.new("ImageLabel")local x= Instance.new("UICorner")local y= Instance.new("UIGradient")local z= Instance.new("ImageLabel")local A= Instance.new("ImageLabel")local B= Instance.new("UICorner")local C= Instance.new("ImageLabel")local D= Instance.new("TextButton")local E= Instance.new("UICorner")local F= Instance.new("TextButton")local G= Instance.new("UICorner")local H= Instance.new("TextLabel")local I= Instance.new("Frame")local J= Instance.new("UICorner")b.Name="ColorpickerFrame"b.Parent=m;b.BackgroundColor3= Color3.fromRGB(29, 26, 53)b.Position= UDim2.new(0.0457920805, 0, 0.685394764, 0)b.Size= UDim2.new(0, 375, 0, 0)b.Visible=false;b.AutoButtonColor=false;b.BorderSizePixel=0;b.ClipsDescendants=true;v.Name="Hue"v.Parent=b;v.BackgroundColor3= Color3.fromRGB(255, 255, 255)v.Position= UDim2.new(0, 240, 0, 9)v.Size= UDim2.new(0, 30, 0, 93)x.CornerRadius= UDim.new(0, 3)x.Name="huecorner"x.Parent=v;y.Color=
+				ColorSequence.new {
+					ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 0, 4)),
+					ColorSequenceKeypoint.new(0.20, Color3.fromRGB(234, 255, 0)),
+					ColorSequenceKeypoint.new(0.40, Color3.fromRGB(21, 255, 0)),
+					ColorSequenceKeypoint.new(0.60, Color3.fromRGB(0, 255, 255)),
+					ColorSequenceKeypoint.new(0.80, Color3.fromRGB(0, 17, 255)),
+					ColorSequenceKeypoint.new(0.90, Color3.fromRGB(255, 0, 251)),
+					ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 0, 4))
+				}y.Rotation=270;y.Parent=v;z.Name="HueSelection"z.Parent=v;z.BackgroundColor3= Color3.fromRGB(255, 255, 255)z.BackgroundTransparency=1.000;z.Position= UDim2.new(0.48, 0, 1 - select(1, Color3.toHSV(f)))z.Size= UDim2.new(0, 18, 0, 18)z.Image="http://www.roblox.com/asset/?id=4805639000"z.AnchorPoint= Vector2.new(0.5, 0.5)A.Name="Color"A.Parent=b;A.BackgroundColor3=f;A.Position= UDim2.new(0, 8, 0, 9)A.Size= UDim2.new(0, 219, 0, 93)A.ZIndex=10;A.Image="rbxassetid://4155801252"B.CornerRadius= UDim.new(0, 3)B.Parent=A;C.Name="ColorSelection"C.Parent=A;C.AnchorPoint= Vector2.new(0.5, 0.5)C.BackgroundColor3= Color3.fromRGB(255, 255, 255)C.ZIndex=25;C.AnchorPoint= Vector2.new(0.5, 0.5)C.BackgroundTransparency=1.000;C.Position= UDim2.new(f and select(3, Color3.toHSV(f)))C.Size= UDim2.new(0, 18, 0, 18)C.Image="http://www.roblox.com/asset/?id=4805639000"C.ScaleType= Enum.ScaleType.Fit;D.Name="Confirm"D.Parent=b;D.AnchorPoint= Vector2.new(0.5, 0.5)D.BackgroundColor3= Color3.fromRGB(29, 26, 53)D.Position= UDim2.new(0.86292477, 0, 0.211035922, 0)D.Size= UDim2.new(0, 98, 0, 29)D.AutoButtonColor=false;D.Font= Enum.Font.Gotham;D.Text="Confirm"D.TextColor3= Color3.fromRGB(195, 195, 195)D.TextSize=14.000;D.MouseEnter:Connect(
+				function()
+					c:Create(
+						D,
+						TweenInfo.new(.3, Enum.EasingStyle.Quart, Enum.EasingDirection.Out),
+						{BackgroundColor3 = Color3.fromRGB(33, 31, 56)}
+					):Play()
+					c:Create(
+						D,
+						TweenInfo.new(.3, Enum.EasingStyle.Quart, Enum.EasingDirection.Out),
+						{TextColor3 = Color3.fromRGB(255, 255, 255)}
+					):Play()
+				end
+			)D.MouseLeave:Connect(
+				function()
+					c:Create(
+						D,
+						TweenInfo.new(.3, Enum.EasingStyle.Quart, Enum.EasingDirection.Out),
+						{BackgroundColor3 = Color3.fromRGB(29, 26, 53)}
+					):Play()
+					c:Create(
+						D,
+						TweenInfo.new(.3, Enum.EasingStyle.Quart, Enum.EasingDirection.Out),
+						{TextColor3 = Color3.fromRGB(195, 195, 195)}
+					):Play()
+				end
+			)E.CornerRadius= UDim.new(0, 6)E.Name="ButtonUICorner"E.Parent=D;F.Name="RainbowToggle"F.Parent=b;F.AnchorPoint= Vector2.new(0.5, 0.5)F.BackgroundColor3= Color3.fromRGB(29, 26, 53)F.Position= UDim2.new(0.84592477, 0, 0.498795807, 0)F.Size= UDim2.new(0, 80, 0, 29)F.AutoButtonColor=false;F.Font= Enum.Font.Gotham;F.Text=""F.TextColor3= Color3.fromRGB(195, 195, 195)F.TextSize=14.000;F.Visible=false;G.CornerRadius= UDim.new(0, 6)G.Name="RainbowToggleUICorner"G.Parent=F;H.Name="RainbowTitle"H.Parent=F;H.BackgroundColor3= Color3.fromRGB(255, 255, 255)H.BackgroundTransparency=1.000;H.Position= UDim2.new(0.0244399179, 0, 0.068965517, 0)H.Size= UDim2.new(0.962365568, 0, 1, 0)H.Font= Enum.Font.Gotham;H.Text="Rainbow"H.TextColor3= Color3.fromRGB(195, 195, 195)H.TextSize=14.000;H.TextXAlignment= Enum.TextXAlignment.Left;I.Name="RainbowStatus"I.Parent=F;I.BackgroundColor3= Color3.fromRGB(74, 68, 94)I.Position= UDim2.new(0.927419364, 0, 0.15625, 0)I.Size= UDim2.new(0, 21, 0, 21)J.CornerRadius= UDim.new(0, 6)J.Name="RainbowStatusUICorner"J.Parent=I;local function x(a)w.BackgroundColor3= Color3.fromHSV(o, p, q)A.BackgroundColor3= Color3.fromHSV(o, 1, 1)pcall(g, w.BackgroundColor3)end;o=1-(math.clamp(z.AbsolutePosition.Y - v.AbsolutePosition.Y, 0, v.AbsoluteSize.Y) /
+					v.AbsoluteSize.Y)p=
+				(math.clamp(C.AbsolutePosition.X - A.AbsolutePosition.X, 0, A.AbsoluteSize.X) /
+					A.AbsoluteSize.X)q=1-(math.clamp(C.AbsolutePosition.Y - A.AbsolutePosition.Y, 0, A.AbsoluteSize.Y) /
+					A.AbsoluteSize.Y)w.BackgroundColor3=f;A.BackgroundColor3=f;pcall(g, w.BackgroundColor3)A.InputBegan:Connect(
+				function(a)
+					if a.UserInputType == Enum.UserInputType.MouseButton1 then
+						if r then
+							return
+						end
+
+						if s then
+							s:Disconnect()
+						end
+
+						s =
+							d.RenderStepped:Connect(
+								function()
+								local a =
+									(math.clamp(e.X - A.AbsolutePosition.X, 0, A.AbsoluteSize.X) /
+										A.AbsoluteSize.X)
+								local b =
+									(math.clamp(e.Y - A.AbsolutePosition.Y, 0, A.AbsoluteSize.Y) /
+										A.AbsoluteSize.Y)
+
+								C.Position = UDim2.new(a, 0, b, 0)
+								p = a
+								q = 1 - b
+
+								x(true)
+							end
+							)
+					end
+				end
+			)A.InputEnded:Connect(
+				function(a)
+					if a.UserInputType == Enum.UserInputType.MouseButton1 then
+						if s then
+							s:Disconnect()
+						end
+					end
+				end
+			)v.InputBegan:Connect(
+				function(a)
+					if a.UserInputType == Enum.UserInputType.MouseButton1 then
+						if r then
+							return
+						end
+
+						if t then
+							t:Disconnect()
+						end
+
+						t =
+							d.RenderStepped:Connect(
+								function()
+								local a =
+									(math.clamp(e.Y - v.AbsolutePosition.Y, 0, v.AbsoluteSize.Y) /
+										v.AbsoluteSize.Y)
+
+								z.Position = UDim2.new(0.48, 0, a, 0)
+								o = 1 - a
+
+								x(true)
+							end
+							)
+					end
+				end
+			)v.InputEnded:Connect(
+				function(a)
+					if a.UserInputType == Enum.UserInputType.MouseButton1 then
+						if t then
+							t:Disconnect()
+						end
+					end
+				end
+			)F.MouseButton1Down:Connect(
+				function()
+					r = not r
+
+					if s then
+						s:Disconnect()
+					end
+
+					if t then
+						t:Disconnect()
+					end
+
+					if r then
+						c:Create(
+							I,
+							TweenInfo.new(.3, Enum.EasingStyle.Quart, Enum.EasingDirection.Out),
+							{BackgroundColor3 = Color3.fromRGB(135, 128, 1768)}
+						):Play()
+
+						i = w.BackgroundColor3
+						j = A.BackgroundColor3
+						k = C.Position
+						l = z.Position
+
+						while r do
+							w.BackgroundColor3 = Color3.fromHSV(a.RainbowColorValue, 1, 1)
+							A.BackgroundColor3 = Color3.fromHSV(a.RainbowColorValue, 1, 1)
+
+							C.Position = UDim2.new(1, 0, 0, 0)
+							z.Position = UDim2.new(0.48, 0, 0, a.HueSelectionPosition)
+
+							pcall(g, w.BackgroundColor3)
+							wait()
+						end
+					elseif not r then
+						c:Create(
+							I,
+							TweenInfo.new(.3, Enum.EasingStyle.Quart, Enum.EasingDirection.Out),
+							{BackgroundColor3 = Color3.fromRGB(74, 68, 94)}
+						):Play()
+						w.BackgroundColor3 = i
+						A.BackgroundColor3 = j
+
+						C.Position = k
+						z.Position = l
+
+						pcall(g, w.BackgroundColor3)
+					end
+				end
+			)u.MouseButton1Click:Connect(
+				function()
+					if h == false then
+						h = not h
+						b.Visible = true
+						b:TweenSize(
+							UDim2.new(0, 375, 0, 111),
+							Enum.EasingDirection.Out,
+							Enum.EasingStyle.Quart,
+							0.1,
+							true
+						)
+						repeat
+							wait()
+						until b.Size == UDim2.new(0, 375, 0, 111)
+						m.CanvasSize = UDim2.new(0, 0, 0, n.AbsoluteContentSize.Y)
+					else
+						h = not h
+						b:TweenSize(
+							UDim2.new(0, 375, 0, 0),
+							Enum.EasingDirection.Out,
+							Enum.EasingStyle.Quart,
+							0.1	,
+							true
+						)
+						wait(.05)
+						b.Visible = false
+						repeat
+							wait()
+						until b.Size == UDim2.new(0, 375, 0, 0)
+						m.CanvasSize = UDim2.new(0, 0, 0, n.AbsoluteContentSize.Y)
+					end
+				end
+			)D.MouseButton1Click:Connect(
+				function()
+					h = not h
+					b:TweenSize(
+						UDim2.new(0, 375, 0, 0),
+						Enum.EasingDirection.Out,
+						Enum.EasingStyle.Quart,
+						0.1,
+						true
+					)
+					wait(.05)
+					b.Visible = false
+					repeat
+						wait()
+					until b.Size == UDim2.new(0, 375, 0, 0)
+					m.CanvasSize = UDim2.new(0, 0, 0, n.AbsoluteContentSize.Y)
+				end
+			)m.CanvasSize= UDim2.new(0, 0, 0, n.AbsoluteContentSize.Y)end;return b end;function f:TabLine(a)local b= Instance.new("TextLabel")b.Name="TabLine"b.Parent=A;b.BackgroundColor3= Color3.fromRGB(255, 255, 255)b.BackgroundTransparency=1.000;b.Position= UDim2.new(0.081368126, 0, 0.168604657, 0)b.Size= UDim2.new(0, 116, 0, 28)b.ZIndex=3;b.Font= Enum.Font.GothamSemibold;b.Text=a;b.TextColor3= Color3.fromRGB(255, 255, 255)b.TextSize=14.000;b.TextWrapped=true;b.TextXAlignment= Enum.TextXAlignment.Left end;return f end;return a
